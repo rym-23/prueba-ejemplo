@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><title>Marié · Música, Arte, Emoción</title>
+<link rel="icon" type="image/png" href="./logo-marie.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--card:#111012;--gold:#F6C9B8;--lil:#ee9db0;--cr:#F6C9B8;--tx:#f3ece8;--mu:#a9a0a8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font:300 17px/1.7 Jost,system-ui,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(600px 400px at 15% 10%,#ee9db022,transparent),radial-gradient(500px 500px at 90% 80%,#F6C9B814,transparent);animation:drift 14s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-40px,30px) scale(1.15)}}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+h2{font-size:clamp(2.1rem,5vw,3.2rem);color:var(--cr)}h3{font-size:1.6rem;color:var(--gold)}h4{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--lil);margin:1.4rem 0 .3rem}
+.eyebrow{letter-spacing:.35em;font-size:.72rem;color:var(--lil);text-transform:uppercase;margin-bottom:.8rem;display:block}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.5rem 5vw;background:#000000d9;backdrop-filter:blur(10px);border-bottom:1px solid #F6C9B833}
+nav img{width:54px;height:54px;border-radius:50%;flex:none}
+nav ul{display:flex;gap:1.3rem;list-style:none;padding:0;overflow-x:auto}
+nav a{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mu);cursor:pointer;padding:.3rem 0;border-bottom:1px solid transparent;transition:.3s;white-space:nowrap}
+nav a:hover,nav a.on{color:var(--gold);border-color:var(--gold)}
+.btn{display:inline-block;background:linear-gradient(120deg,var(--gold),var(--cr),var(--gold));background-size:200%;color:#1a1012;padding:.9rem 2rem;border-radius:99px;font:500 .9rem Jost,sans-serif;letter-spacing:.12em;text-transform:uppercase;border:0;cursor:pointer;transition:.4s;text-decoration:none}
+.btn:hover{background-position:100%;transform:translateY(-3px);box-shadow:0 10px 30px #F6C9B844}.btn.o{background:none;color:var(--gold);border:1px solid var(--gold)}
+.btn svg{width:1.15em;height:1.15em;vertical-align:-.2em;margin-right:.55rem}.ig-row{margin-top:2rem}
+.view{display:none;max-width:1100px;margin:auto;padding:4rem 5vw}.view.on{display:block;animation:in .7s ease}
+@keyframes in{from{opacity:0;transform:translateY(24px)}}
+.rv{opacity:0;transform:translateY(30px);transition:1s cubic-bezier(.2,.7,.2,1)}.rv.v{opacity:1;transform:none}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;min-height:78vh}
+.hero h1{font-size:clamp(2.8rem,6.5vw,5rem);color:var(--cr)}.hero h1 em{color:var(--lil)}
+.hero p{color:var(--mu);margin:1.3rem 0 2rem;max-width:36ch;font-size:1.1rem}
+.hero img{width:100%;max-width:470px;justify-self:center;border-radius:50%;animation:fl 6s ease-in-out infinite;box-shadow:0 0 90px #ee9db033}
+@keyframes fl{50%{transform:translateY(-16px) rotate(1.5deg)}}
+.wave{display:flex;gap:5px;align-items:center;height:40px;margin-top:2.2rem}.wave i{width:3px;background:var(--gold);border-radius:3px;animation:w 1.2s ease-in-out infinite}
+@keyframes w{0%,100%{height:6px}50%{height:38px}}
+.mq{overflow:hidden;border-block:1px solid #F6C9B833;padding:1rem 0;margin:1rem 0 4rem;white-space:nowrap}
+.mq span{display:inline-block;animation:m 22s linear infinite;font:italic 500 1.7rem 'Cormorant Garamond',serif;color:var(--gold);padding-right:2rem}
+@keyframes m{to{transform:translateX(-50%)}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.3rem;margin-top:2rem}
+.card{background:var(--card);border:1px solid #F6C9B824;border-radius:6px;padding:1.8rem;position:relative;overflow:hidden;transition:.4s}
+.card:before{content:"";position:absolute;left:0;top:0;height:2px;width:0;background:linear-gradient(90deg,var(--gold),var(--lil));transition:.5s}
+.card:hover{transform:translateY(-6px);border-color:#ee9db077}.card:hover:before{width:100%}
+.card p,.mu{color:var(--mu);font-size:.96rem}.card p+p{margin-top:.6rem}.num{font:500 3rem 'Cormorant Garamond',serif;color:#F6C9B840;line-height:1}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem;margin-top:3rem}
+.q{border-left:2px solid var(--lil);padding-left:1.5rem}.q p{color:var(--mu);margin-top:.6rem}
+.sec{margin-top:4.5rem}
+.wk{display:grid;grid-template-columns:90px 1fr;gap:1.5rem;padding:1.8rem 0;border-bottom:1px solid #F6C9B822}
+.wk b{font:500 3.4rem/1 'Cormorant Garamond',serif;color:var(--lil)}.wk small{display:block;letter-spacing:.2em;color:var(--mu);font-size:.65rem}
+ul.l{color:var(--mu);padding-left:1.1rem;margin-top:.5rem;font-size:.95rem}ul.l li{margin:.3rem 0}ul.l b{color:var(--cr);font-weight:500}
+.ph{border:1px dashed #F6C9B866;background:linear-gradient(135deg,#111012,#1a1416);display:grid;place-items:center;text-align:center;border-radius:6px;color:var(--mu);padding:1rem;font-size:.9rem}
+.wide{aspect-ratio:16/10}.sq{aspect-ratio:1}
+.ph img{width:100%;height:100%;border:0;object-fit:cover;border-radius:6px}
+.tag{display:inline-block;border:1px solid #ee9db066;color:var(--lil);border-radius:99px;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;padding:.2rem .8rem;margin-bottom:.8rem}
+.post .cap{color:var(--mu);font-size:.92rem;margin:.9rem 0 .4rem}.post .ht{color:var(--lil);font-size:.85rem}
+.map{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;margin-top:2rem}
+.map .c{border:1px solid var(--gold);border-radius:50%;width:160px;height:160px;display:grid;place-items:center;text-align:center;font:600 1.4rem 'Cormorant Garamond',serif;color:var(--gold);padding:1rem;box-shadow:0 0 50px #F6C9B822}
+.map .s{display:grid;gap:1rem}.map .n{background:var(--card);border:1px solid #ee9db055;border-radius:6px;padding:1rem 1.2rem}.map .n b{color:var(--lil);font-weight:500;display:block;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase}.map .n span{color:var(--mu);font-size:.9rem}
+.art{max-width:72ch;margin-top:2rem}.art p{color:#cfc6cc;margin-top:1rem;font-size:1rem}
+.mail{background:#fbf6ee;color:#241a1c;max-width:640px;margin:2rem auto 0;border-radius:6px;overflow:hidden}
+.mail header{background:#000;text-align:center;padding:1.4rem}.mail header img{width:120px;border-radius:50%}
+.mail .b{padding:2rem 2.2rem}.mail h3{color:#b5657a}.mail p{margin:.8rem 0;font-size:.98rem}
+.mail .cta{display:inline-block;background:#000;color:var(--gold);padding:.7rem 1.6rem;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem}
+.mail footer{background:#000;color:var(--mu);text-align:center;padding:1rem;font-size:.75rem}
+.ref{color:var(--mu);font-size:.95rem;padding:.9rem 0 .9rem 2rem;text-indent:-2rem;border-bottom:1px solid #F6C9B818}.ref a{color:var(--lil)}
+form{display:grid;gap:.9rem;margin-top:1.5rem;max-width:600px}
+input,select,textarea{width:100%;background:var(--card);border:1px solid #F6C9B833;color:var(--tx);padding:.85rem 1rem;border-radius:4px;font:inherit}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--lil)}
+footer.f{text-align:center;padding:3rem 5vw;border-top:1px solid #F6C9B833;color:var(--mu);font-size:.85rem}footer.f img{width:100px;border-radius:50%;margin-bottom:1rem}
+.wkc{cursor:pointer}.wkc h3{margin:.4rem 0}.wkp{display:none}.wkp.on{display:block;animation:in .6s ease}
+.pills{display:flex;gap:.5rem;flex-wrap:wrap}.pills a{cursor:pointer;min-width:2.4rem;text-align:center;padding:.35rem .9rem;border:1px solid #F6C9B833;border-radius:99px;font-size:.8rem;letter-spacing:.1em;color:var(--mu);transition:.3s}.pills a:hover,.pills a.on{color:#1a1012;background:var(--gold);border-color:var(--gold)}
+.wknav{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:4rem;padding-top:2rem;border-top:1px solid #F6C9B822}
+.deck{position:relative;max-width:900px;margin:1.5rem auto 0;background:#000;border:1px solid #F6C9B833;border-radius:8px;overflow:hidden;user-select:none;outline:0}
+.deck .stage{position:relative;aspect-ratio:16/9;background:#000}.deck .stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .5s;pointer-events:none}.deck .stage img.on{opacity:1}
+.deck .dp,.deck .dn{position:absolute;top:calc(50% - 1.5rem);width:2.8rem;height:2.8rem;border-radius:50%;border:1px solid #F6C9B866;background:#000000a6;color:var(--gold);font-size:1.7rem;line-height:1;cursor:pointer;transition:.3s;display:grid;place-items:center;padding:0 0 .2rem}.deck .dp{left:.7rem}.deck .dn{right:.7rem}.deck .dp:hover,.deck .dn:hover{background:var(--gold);color:#1a1012}
+.deck .bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 1rem;border-top:1px solid #F6C9B822;background:#0b0a0b;font-size:.8rem;color:var(--mu)}
+.deck .dots{display:flex;gap:.45rem;flex-wrap:wrap;justify-content:center}.deck .dots i{width:9px;height:9px;border-radius:50%;background:#F6C9B840;cursor:pointer;transition:.3s}.deck .dots i.on{background:var(--gold);transform:scale(1.25)}
+.deck .fs{background:none;border:1px solid #F6C9B844;color:var(--gold);border-radius:99px;padding:.25rem .8rem;font:inherit;cursor:pointer}.deck .fs:hover{background:var(--gold);color:#1a1012}
+.deck:fullscreen{max-width:none;margin:0;border-radius:0;display:flex;flex-direction:column}.deck:fullscreen .stage{flex:1;aspect-ratio:auto}
+@media(max-width:760px){.deck .fs{display:none}.deck .dp,.deck .dn{width:2.2rem;height:2.2rem;font-size:1.3rem}}
+@media(max-width:760px){.hero,.two,.map{grid-template-columns:1fr}.map .c{margin:auto}.hero img{order:-1;max-width:280px}.wk{grid-template-columns:60px 1fr}nav img{width:44px;height:44px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.fotos{display:grid;gap:1.3rem;align-content:start}.foto{width:100%;display:block;border-radius:6px;border:1px solid #F6C9B833;box-shadow:0 0 60px #ee9db022}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap}.card .btn{margin-top:1.1rem;padding:.7rem 1.4rem;font-size:.78rem}
+html{-webkit-text-size-adjust:100%}a,button{-webkit-tap-highlight-color:transparent}nav ul{scrollbar-width:none}nav ul::-webkit-scrollbar{display:none}
+@media(max-width:760px){body{font-size:16px}.view{padding:2.2rem 5vw}nav{padding:.4rem 4vw}nav ul{gap:1.1rem}.hero{min-height:auto;gap:1.2rem;text-align:center}.hero p{margin:1rem auto 1.6rem}.cta{flex-direction:column}.cta .btn{width:100%;text-align:center}.wave{justify-content:center;margin-top:1.6rem}.eyebrow{letter-spacing:.25em}.mq{margin:1rem 0 2.5rem}.mq span{font-size:1.3rem}.sec{margin-top:3rem}.card{padding:1.4rem}.two{margin-top:2rem}.wknav{flex-direction:column;align-items:stretch}.wknav .btn{text-align:center}.wknav span{display:none}form .btn{width:100%}input,select,textarea{font-size:16px}footer.f{padding:2.2rem 5vw}}
+</style></head><body>
+<nav><img src="./logo-marie.png" alt="Marié"><ul id="menu">
+<li><a data-v="inicio" class="on">Inicio</a></li><li><a data-v="sobre">Sobre Marié</a></li><li><a data-v="servicios">Servicios</a></li><li><a data-v="semanas">Semanas</a></li><li><a data-v="contacto">Contacto</a></li></ul></nav>
+
+<main>
+<!-- INICIO -->
+<section class="view on" id="inicio">
+<div class="hero"><div><span class="eyebrow">Violín solista para eventos</span><h1>La música que hace <em>inolvidable</em> cada momento</h1><p>Marié es un proyecto artístico de violín: presentaciones solo con el sonido del instrumento, hechas con alma e intención.</p><div class="cta"><a class="btn" data-v="contacto">Cotizar mi evento</a><a class="btn o" data-v="sobre">Conocer a Marié</a><a class="btn o" href="https://www.instagram.com/marie.violin" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor"/></svg>@marie.violin</a></div><div class="wave"></div></div>
+<img src="./logo-marie.png" alt="Logo de Marié: violín, música, arte, emoción"></div>
+<div class="mq"><span>Música · Arte · Emoción · Música · Arte · Emoción · Música · Arte · Emoción · Música · Arte · Emoción · </span></div>
+<div class="rv"><span class="eyebrow">Quiénes somos</span><h2>Una pasión convertida en empresa</h2><p class="mu" style="max-width:70ch;margin-top:1rem">Marié nace del amor por el violín y de la inspiración de artistas performance como Lindsey Stirling. Ofrecemos presentaciones para reuniones, matrimonios, cumpleaños y celebraciones familiares o empresariales, adaptando el repertorio a cada cliente. Cada vestuario es diseñado y confeccionado a mano, porque la moda también es una forma de arte.</p></div>
+<div class="two"><div class="q rv"><h3>Misión</h3><p>Ofrecer presentaciones de violín para diferentes eventos, usando la música para acompañar y hacer más especiales los momentos importantes de las personas, interpretando cada obra con alma e intención y uniendo música y moda hecha a mano.</p></div>
+<div class="q rv"><h3>Visión</h3><p>Ser un proyecto artístico reconocido por sus presentaciones y la calidad de su servicio, con identidad sólida, colaboraciones con otros músicos y, a futuro, música propia con alcance mundial, siempre con el violín en el centro.</p></div></div>
+<div class="sec rv"><span class="eyebrow">Noticias</span><h2>Noticias del mundo del violín</h2></div>
+<div class="grid"><div class="card rv"><span class="tag">Curiosidad</span><h3>El arco suena gracias a un caballo</h3><p>Las cerdas del arco son de crin de caballo. Con un poco de resina agarran la cuerda y la hacen vibrar: sin eso, el violín casi no suena.</p></div><div class="card rv"><span class="tag">Historia</span><h3>Violines de más de 300 años siguen en escena</h3><p>Los instrumentos que Antonio Stradivari construyó en Cremona siguen tocándose hoy en grandes conciertos, y su sonido aún inspira a luthiers de todo el mundo.</p></div><div class="card rv"><span class="tag">Tendencia</span><h3>El violín sale del atril</h3><p>Artistas como Lindsey Stirling mezclan violín, danza y vestuario en shows en vivo, una forma de presentación que inspira a nuevas violinistas.</p></div><div class="card rv"><span class="tag">Marié</span><h3>Se viene vestuario nuevo</h3><p>Marié prepara nuevas piezas hechas a mano para sus próximas presentaciones. Los avances se publican primero en Instagram.</p><a class="btn o" href="https://www.instagram.com/marie.violin" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor"/></svg>@marie.violin</a></div></div>
+</section>
+
+<!-- SOBRE -->
+<section class="view" id="sobre"><span class="eyebrow">El proyecto</span><h2>Sobre Marié</h2>
+<p class="mu" style="max-width:70ch;margin-top:1rem">Marié es un proyecto artístico de violín solista. Une la música en vivo con el diseño de vestuarios hechos a mano para que cada presentación sea una experiencia completa: se escucha y también se ve.</p>
+<div class="two"><div class="fotos rv"><img class="foto" src="marie-violin.png" alt="Marié tocando el violín" loading="lazy"><img class="foto" src="marie-violin-2.png" alt="Retrato de Marié con su violín" loading="lazy"></div>
+<div class="rv"><h3>Historia de Marié</h3><p class="mu" style="margin-top:.8rem">Marié nació de mi pasión por el violín y de mi sueño de convertir la música en una forma de expresión y trabajo. Inspirada por artistas como Lindsey Stirling, decidí crear un proyecto donde pudiera ofrecer presentaciones de violín en diferentes eventos.</p><p class="mu" style="margin-top:.8rem">Con ayuda de las redes sociales, quiero dar a conocer mi música, crear mi propia identidad artística y combinar el violín con otra de mis pasiones: la moda.</p><p class="mu" style="margin-top:.8rem">A futuro, sueño con crear mi propia música, crecer como artista y convertir a Marié en un proyecto reconocido a nivel mundial.</p><div class="ig-row"><a class="btn" href="https://www.instagram.com/marie.violin" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor"/></svg>Sigue a Marié en Instagram</a></div><h4>Inspiración</h4><p class="mu">Lindsey Stirling, violinista y artista performance que combina violín, danza y vestuario, es una de las referencias del enfoque escénico de Marié.</p></div></div>
+<div class="sec rv"><span class="eyebrow">Valores</span><h2>Lo que nos guía</h2></div>
+<div class="grid"><div class="card rv"><h3>Intención</h3><p>Cada obra se interpreta con alma, pensando en quien la escucha.</p></div><div class="card rv"><h3>Personalización</h3><p>El repertorio se adapta a la historia y al gusto de cada cliente.</p></div><div class="card rv"><h3>Arte integral</h3><p>Música y moda hecha a mano en una misma propuesta.</p></div><div class="card rv"><h3>Cercanía</h3><p>Comunicación clara y cálida antes, durante y después del evento.</p></div></div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="view" id="servicios"><span class="eyebrow">Servicios</span><h2>Música en vivo para tu evento</h2><p class="mu" style="max-width:70ch;margin-top:1rem">Presentaciones de violín solista con repertorio adaptado a cada celebración.</p>
+<div class="grid"><div class="card rv"><div class="num">01</div><h3>Bodas</h3><p>Acompañamiento en la ceremonia, el cóctel y la entrada de los novios.</p></div>
+<div class="card rv"><div class="num">02</div><h3>Cumpleaños</h3><p>Sorpresas musicales y repertorio con las canciones favoritas del homenajeado.</p></div>
+<div class="card rv"><div class="num">03</div><h3>Reuniones familiares</h3><p>Aniversarios, grados y encuentros con un ambiente musical especial.</p></div>
+<div class="card rv"><div class="num">04</div><h3>Eventos empresariales</h3><p>Lanzamientos, cenas y celebraciones corporativas con un toque elegante.</p></div></div>
+<div class="sec rv"><span class="eyebrow">Proceso</span><h2>Cómo trabajamos</h2></div>
+<div class="grid"><div class="card rv"><div class="num">1</div><h3>Cuéntame</h3><p>Escribes los detalles de tu evento en el formulario de contacto.</p></div><div class="card rv"><div class="num">2</div><h3>Personalizamos</h3><p>Definimos repertorio, duración y momentos musicales.</p></div><div class="card rv"><div class="num">3</div><h3>Cotizamos</h3><p>Recibes una propuesta. <span class="mu">[Las tarifas las defines tú; no se publican valores sin confirmar.]</span></p></div><div class="card rv"><div class="num">4</div><h3>Celebramos</h3><p>Llego con mi violín y mi vestuario para que el momento sea único.</p></div></div>
+<div style="margin-top:3rem"><a class="btn" data-v="contacto">Cotizar mi evento</a></div>
+</section>
+
+<!-- SEMANAS -->
+<section class="view" id="semanas"><div id="wkIndex"><span class="eyebrow">Proyecto de aula</span><h2>Semanas</h2><p class="mu" style="max-width:70ch;margin-top:1rem">Todas las actividades del curso, ordenadas por semana. Elige una para ver su producto.</p>
+<div class="grid"><div class="card wkc rv" data-w="1"><div class="num">01</div><h3>Newsletter</h3><p>Productividad y economía digital</p><span class="tag" style="margin:.8rem 0 0">Newsletter</span></div><div class="card wkc rv" data-w="2"><div class="num">02</div><h3>Sin actividad</h3><p>Esta semana no tiene entrega</p><span class="tag" style="margin:.8rem 0 0">—</span></div><div class="card wkc rv" data-w="3"><div class="num">03</div><h3>Criptomonedas</h3><p>Presentación e infografía</p><span class="tag" style="margin:.8rem 0 0">Presentación · Infografía</span></div><div class="card wkc rv" data-w="4"><div class="num">04</div><h3>Estrategia de comunicación</h3><p>Mapa conceptual interno y externo</p><span class="tag" style="margin:.8rem 0 0">Mapa conceptual</span></div><div class="card wkc rv" data-w="5"><div class="num">05</div><h3>Organización y creatividad</h3><p>Google Calendar y herramientas para generar ideas</p><span class="tag" style="margin:.8rem 0 0">Planificación en Google Calendar · Investigación</span></div><div class="card wkc rv" data-w="6"><div class="num">06</div><h3>FINTECH y economía digital</h3><p>Artículo de revista</p><span class="tag" style="margin:.8rem 0 0">Artículo de revista</span></div><div class="card wkc rv" data-w="7"><div class="num">07</div><h3>Marketing digital e inbound</h3><p>Estrategia y presentación eficaz</p><span class="tag" style="margin:.8rem 0 0">Estrategia inbound · Presentación</span></div></div></div>
+<div class="wkp" id="wk1"><div class="pills"><a data-w="0">Todas</a><a data-w="1" class=on>1</a><a data-w="2">2</a><a data-w="3">3</a><a data-w="4">4</a><a data-w="5">5</a><a data-w="6">6</a><a data-w="7">7</a></div><span class="eyebrow" style="margin-top:2rem">Semana 1</span><h2>Newsletter</h2><p class="mu" style="margin-top:.8rem">Productividad y economía digital</p><div class="rv" style="margin-top:2rem;max-width:760px"><a href="semana%201/Newsletter%20acad%C3%A9mico%20de%20Mari%C3%A9.jpg" target="_blank" rel="noopener"><img src="semana%201/Newsletter%20acad%C3%A9mico%20de%20Mari%C3%A9.jpg" alt="Newsletter académico de Marié: productividad personal, herramientas, procesos y economía digital" style="width:100%;border-radius:6px;display:block"></a></div>
+<div class="wknav"><span></span><a class="btn o" data-w="0">Todas las semanas</a><a class="btn o" data-w="2">Semana 2 →</a></div></div>
+<div class="wkp" id="wk2"><div class="pills"><a data-w="0">Todas</a><a data-w="1">1</a><a data-w="2" class=on>2</a><a data-w="3">3</a><a data-w="4">4</a><a data-w="5">5</a><a data-w="6">6</a><a data-w="7">7</a></div><span class="eyebrow" style="margin-top:2rem">Semana 2</span><h2>Sin actividad</h2><p class="mu" style="margin-top:.8rem">Esta semana no tiene entrega</p><div class="card rv" style="margin-top:2rem"><h3>Semana sin actividad</h3><p>En el plan del curso, la semana 2 no tiene una actividad asignada.</p></div><div class="wknav"><a class="btn o" data-w="1">← Semana 1</a><a class="btn o" data-w="0">Todas las semanas</a><a class="btn o" data-w="3">Semana 3 →</a></div></div>
+<div class="wkp" id="wk3"><div class="pills"><a data-w="0">Todas</a><a data-w="1">1</a><a data-w="2">2</a><a data-w="3" class=on>3</a><a data-w="4">4</a><a data-w="5">5</a><a data-w="6">6</a><a data-w="7">7</a></div><span class="eyebrow" style="margin-top:2rem">Semana 3</span><h2>Criptomonedas</h2><p class="mu" style="margin-top:.8rem">Presentación e infografía</p><div class="sec"><span class="eyebrow">Semana 3 · Actividad 1</span><h3>Productos y servicios que se comercializan con criptomonedas</h3><p class="mu" style="max-width:70ch;margin-top:.5rem">Presentación sobre los productos que hoy se pagan con criptomonedas, cómo funcionan las transacciones y cómo hacerlas de forma segura.</p></div>
+<div class="deck" tabindex="0" aria-label="Presentación de la semana 3"><div class="stage"><img src="semana%203/1.jpg" alt="Diapositiva 1 de 6" class=on><img src="semana%203/2.jpg" alt="Diapositiva 2 de 6"><img src="semana%203/3.jpg" alt="Diapositiva 3 de 6"><img src="semana%203/4.jpg" alt="Diapositiva 4 de 6"><img src="semana%203/5.jpg" alt="Diapositiva 5 de 6"><img src="semana%203/6.jpg" alt="Diapositiva 6 de 6"></div><button class="dp" aria-label="Diapositiva anterior">&#8249;</button><button class="dn" aria-label="Diapositiva siguiente">&#8250;</button><div class="bar"><span class="cnt"></span><span class="dots"></span><button class="fs">Pantalla completa</button></div></div>
+<div class="sec"><span class="eyebrow">Semana 3 · Actividad 2</span><h3>Exchanges, wallets y transacciones con Bitcoin</h3><p class="mu" style="max-width:70ch;margin-top:.5rem">Infografías que explican cómo intervienen el exchange, la wallet y la blockchain en una transacción con Bitcoin.</p></div>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:start"><div class="card rv"><a href="semana%203/Infograf%C3%ADa%20vertical%20Mari%C3%A9%20sobre%20Bitcoin.png" target="_blank" rel="noopener"><img src="semana%203/Infograf%C3%ADa%20vertical%20Mari%C3%A9%20sobre%20Bitcoin.png" alt="Infografía de Marié: Bitcoin, exchanges y wallets" style="width:100%;border-radius:6px;display:block"></a></div><div class="card rv"><a href="semana%203/Transacci%C3%B3n%20con%20Bitcoin%20Flujo%20Vertical%20%281%29.png" target="_blank" rel="noopener"><img src="semana%203/Transacci%C3%B3n%20con%20Bitcoin%20Flujo%20Vertical%20%281%29.png" alt="Infografía: cómo funciona una transacción con Bitcoin" style="width:100%;border-radius:6px;display:block"></a></div></div>
+<div class="wknav"><a class="btn o" data-w="2">← Semana 2</a><a class="btn o" data-w="0">Todas las semanas</a><a class="btn o" data-w="4">Semana 4 →</a></div></div>
+<div class="wkp" id="wk4"><div class="pills"><a data-w="0">Todas</a><a data-w="1">1</a><a data-w="2">2</a><a data-w="3">3</a><a data-w="4" class=on>4</a><a data-w="5">5</a><a data-w="6">6</a><a data-w="7">7</a></div><span class="eyebrow" style="margin-top:2rem">Semana 4</span><h2>Estrategia de comunicación</h2><p class="mu" style="margin-top:.8rem">Mapa conceptual interno y externo</p>
+<h3 style="margin:2.5rem 0 1rem">Mapa conceptual: estrategia de comunicación de Marié</h3><div class="rv" style="max-width:460px;margin:auto"><a href="semana%204/Conceptual%20Map%20of%20Takumi%20Communication%20Strategy.jpg" target="_blank" rel="noopener"><img src="semana%204/Conceptual%20Map%20of%20Takumi%20Communication%20Strategy.jpg" alt="Mapa conceptual de la estrategia de comunicación de Marié: modelo web, social media, trabajo en equipo, trabajo colaborativo y otros medios" style="width:100%;border-radius:6px;display:block"></a></div>
+
+<div class="wknav"><a class="btn o" data-w="3">← Semana 3</a><a class="btn o" data-w="0">Todas las semanas</a><a class="btn o" data-w="5">Semana 5 →</a></div></div>
+<div class="wkp" id="wk5"><div class="pills"><a data-w="0">Todas</a><a data-w="1">1</a><a data-w="2">2</a><a data-w="3">3</a><a data-w="4">4</a><a data-w="5" class=on>5</a><a data-w="6">6</a><a data-w="7">7</a></div><span class="eyebrow" style="margin-top:2rem">Semana 5</span><h2>Organización y creatividad</h2><p class="mu" style="margin-top:.8rem">Google Calendar y herramientas para generar ideas</p>
+
+<div class="sec" style="margin-top:2.5rem"><span class="eyebrow">Semana 5 · Actividad 1</span><h3>Planificación de actividades con Google Calendar</h3></div>
+<div class="ph wide rv" style="margin-top:1rem">[Pega aquí el &lt;iframe&gt; de tu Google Calendar o una captura de tu planificación]</div>
+<div class="sec"><span class="eyebrow">Semana 5 · Actividad 2</span><h3>Herramientas y técnicas para solucionar problemas y generar ideas</h3></div>
+<div class="deck" tabindex="0" aria-label="Presentación de la semana 5"><div class="stage"><img src="semana%205/1.png" alt="Diapositiva 1 de 8" class=on><img src="semana%205/2.png" alt="Diapositiva 2 de 8"><img src="semana%205/3.png" alt="Diapositiva 3 de 8"><img src="semana%205/4.png" alt="Diapositiva 4 de 8"><img src="semana%205/5.png" alt="Diapositiva 5 de 8"><img src="semana%205/6.png" alt="Diapositiva 6 de 8"><img src="semana%205/7.png" alt="Diapositiva 7 de 8"><img src="semana%205/8.png" alt="Diapositiva 8 de 8"></div><button class="dp" aria-label="Diapositiva anterior">&#8249;</button><button class="dn" aria-label="Diapositiva siguiente">&#8250;</button><div class="bar"><span class="cnt"></span><span class="dots"></span><button class="fs">Pantalla completa</button></div></div>
+
+<div class="wknav"><a class="btn o" data-w="4">← Semana 4</a><a class="btn o" data-w="0">Todas las semanas</a><a class="btn o" data-w="6">Semana 6 →</a></div></div>
+<div class="wkp" id="wk6"><div class="pills"><a data-w="0">Todas</a><a data-w="1">1</a><a data-w="2">2</a><a data-w="3">3</a><a data-w="4">4</a><a data-w="5">5</a><a data-w="6" class=on>6</a><a data-w="7">7</a></div><span class="eyebrow" style="margin-top:2rem">Semana 6</span><h2>FINTECH y economía digital</h2><p class="mu" style="margin-top:.8rem">Artículo de revista</p><div class="sec"><span class="eyebrow">Semana 6</span><h2>Artículo de revista: Revolución de FINTECH</h2>
+<div class="rv" style="max-width:640px;margin-top:2rem"><a href="semana%206/Copia%20de%20Brown%20and%20Beige%20Modern%20Revolutionizing%20Fashion%20Article%20Page%20Document%20%281%29.jpg" target="_blank" rel="noopener"><img src="semana%206/Copia%20de%20Brown%20and%20Beige%20Modern%20Revolutionizing%20Fashion%20Article%20Page%20Document%20%281%29.jpg" alt="Artículo de revista: Revolución de FINTECH" style="width:100%;border-radius:6px;display:block"></a></div>
+
+</div>
+
+<div class="wknav"><a class="btn o" data-w="5">← Semana 5</a><a class="btn o" data-w="0">Todas las semanas</a><a class="btn o" data-w="7">Semana 7 →</a></div></div>
+<div class="wkp" id="wk7"><div class="pills"><a data-w="0">Todas</a><a data-w="1">1</a><a data-w="2">2</a><a data-w="3">3</a><a data-w="4">4</a><a data-w="5">5</a><a data-w="6">6</a><a data-w="7" class=on>7</a></div><span class="eyebrow" style="margin-top:2rem">Semana 7</span><h2>Marketing digital e inbound</h2><p class="mu" style="margin-top:.8rem">Estrategia y presentación eficaz</p><div class="sec" style="margin-top:2.5rem"><span class="eyebrow">Semana 7 · Actividad 1</span><h3>Estrategia de marketing digital e inbound</h3><p class="mu" style="max-width:70ch;margin-top:.5rem">Estrategia de Marié con cuatro tipos de contenido digital.</p></div>
+<div class="grid"><div class="card rv"><div class="num">01</div><h3>Educativo</h3><p>Tips de violín y consejos para elegir la música de un evento. Atrae.</p></div><div class="card rv"><div class="num">02</div><h3>Inspiracional</h3><p>Fotos de vestuarios y momentos de presentaciones. Emociona.</p></div><div class="card rv"><div class="num">03</div><h3>Comunidad</h3><p>Detrás de cámaras, historias de eventos, preguntas y respuestas. Conecta.</p></div><div class="card rv"><div class="num">04</div><h3>Conversión</h3><p>Llamados a cotizar, formulario de contacto y testimonios reales cuando existan. Convierte.</p></div></div>
+<div class="grid"><div class="card rv"><h3>Atraer</h3><p>Las redes sociales llevan visitas al sitio web.</p></div><div class="card rv"><h3>Convertir</h3><p>El formulario y el WhatsApp transforman visitantes en solicitudes de cotización.</p></div><div class="card rv"><h3>Fidelizar</h3><p>Newsletter y seguimiento tras el evento generan recomendación.</p></div></div>
+<div class="sec"><span class="eyebrow">Semana 7 · Actividad 2</span><h3>Presentación eficaz</h3></div>
+<div class="deck" tabindex="0" aria-label="Presentación de la semana 7"><div class="stage"><img src="semana%207/1.jpg" alt="Diapositiva 1 de 9" class=on><img src="semana%207/2.jpg" alt="Diapositiva 2 de 9"><img src="semana%207/3.jpg" alt="Diapositiva 3 de 9"><img src="semana%207/4.jpg" alt="Diapositiva 4 de 9"><img src="semana%207/5.jpg" alt="Diapositiva 5 de 9"><img src="semana%207/6.jpg" alt="Diapositiva 6 de 9"><img src="semana%207/7.jpg" alt="Diapositiva 7 de 9"><img src="semana%207/8.jpg" alt="Diapositiva 8 de 9"><img src="semana%207/9.jpg" alt="Diapositiva 9 de 9"></div><button class="dp" aria-label="Diapositiva anterior">&#8249;</button><button class="dn" aria-label="Diapositiva siguiente">&#8250;</button><div class="bar"><span class="cnt"></span><span class="dots"></span><button class="fs">Pantalla completa</button></div></div>
+<div class="wknav"><a class="btn o" data-w="6">← Semana 6</a><a class="btn o" data-w="0">Todas las semanas</a><span></span></div></div>
+</section>
+
+<!-- CONTACTO -->
+<section class="view" id="contacto"><span class="eyebrow">Contacto</span><h2>Reserva tu fecha</h2><p class="mu" style="max-width:60ch;margin-top:1rem">Cuéntame sobre tu evento y te respondo con una propuesta personalizada.</p>
+<form onsubmit="return enviar(this)"><input name="n" placeholder="Tu nombre" required><select name="t"><option>Boda</option><option>Cumpleaños</option><option>Reunión familiar</option><option>Evento empresarial</option></select><input name="f" type="date" required><input name="l" placeholder="Ciudad / lugar" required><textarea name="m" rows="3" placeholder="Cuéntame más (canciones, ambiente, duración)"></textarea><button class="btn">Enviar por WhatsApp</button></form>
+<div class="grid" style="margin-top:3rem;max-width:420px"><div class="card"><h3>Instagram</h3><p style="margin-bottom:1rem">@marie.violin</p><a class="btn o" href="https://www.instagram.com/marie.violin" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor"/></svg>Abrir Instagram</a></div></div>
+</section>
+</main>
+<footer class="f"><img src="./logo-marie.png" alt="Marié"><br><p style="margin-bottom:1rem"><a class="btn o" href="https://www.instagram.com/marie.violin" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor"/></svg>@marie.violin</a></p>© 2026 Marié. Música · Arte · Emoción.</footer>
+<script>
+var W=document.querySelector('.wave');for(var i=0;i<28;i++){var e=document.createElement('i');e.style.animationDelay=(i*.09)+'s';e.style.animationDuration=(.8+Math.random()*.8)+'s';W.appendChild(e)}
+var io=new IntersectionObserver(function(a){a.forEach(function(x){if(x.isIntersecting)x.target.classList.add('v')})},{threshold:.1});
+function obs(){document.querySelectorAll('.view.on .rv:not(.v)').forEach(function(e){io.observe(e)})}
+function show(v){document.querySelectorAll('.view').forEach(function(s){s.classList.toggle('on',s.id==v)});document.querySelectorAll('#menu a').forEach(function(a){a.classList.toggle('on',a.dataset.v==v)});if(v=='semanas')showWk(0);window.scrollTo(0,0);obs()}
+document.querySelectorAll('[data-v]').forEach(function(a){a.onclick=function(){show(a.dataset.v)}});
+document.querySelectorAll('.deck').forEach(function(d){var im=d.querySelectorAll('.stage img'),dots=d.querySelector('.dots'),cnt=d.querySelector('.cnt'),k=0,x0=null;
+im.forEach(function(_,j){var i=document.createElement('i');i.onclick=function(){go(j)};dots.appendChild(i)});
+function go(n){k=(n+im.length)%im.length;im.forEach(function(e,j){e.classList.toggle('on',j==k)});dots.querySelectorAll('i').forEach(function(e,j){e.classList.toggle('on',j==k)});cnt.textContent=(k+1)+' / '+im.length}
+d.querySelector('.dp').onclick=function(){go(k-1)};d.querySelector('.dn').onclick=function(){go(k+1)};
+d.querySelector('.fs').onclick=function(){document.fullscreenElement?document.exitFullscreen():d.requestFullscreen&&d.requestFullscreen()};
+d.addEventListener('keydown',function(e){if(e.key=='ArrowRight'||e.key==' '){e.preventDefault();go(k+1)}if(e.key=='ArrowLeft'){e.preventDefault();go(k-1)}});
+d.addEventListener('mouseenter',function(){d.focus({preventScroll:true})});
+d.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+d.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)go(k+(dx<0?1:-1));x0=null});
+go(0)});
+function showWk(n){document.getElementById('wkIndex').style.display=n?'none':'block';document.querySelectorAll('.wkp').forEach(function(p){p.classList.toggle('on',p.id=='wk'+n)});window.scrollTo(0,0);obs()}
+document.querySelectorAll('[data-w]').forEach(function(a){a.onclick=function(){showWk(+a.dataset.w)}});
+obs();
+function enviar(f){var n="573223601228";var d=f.elements,t="Hola Marié, soy "+d.n.value+". Quiero cotizar: "+d.t.value+" el "+d.f.value+" en "+d.l.value+". "+d.m.value;window.open("https://wa.me/"+n+"?text="+encodeURIComponent(t),"_blank");return false}
+</script></body></html>
